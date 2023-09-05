@@ -1,0 +1,287 @@
+.mining {
+  padding: 0;
+  margin: 0;
+}
+.mining__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 427px 315px 315px 203px;
+  grid-template-rows: 190px 150px 25px 11px 271px 103px;
+  grid-template-areas:
+    "bitmain pool hotel optom"
+    "bitmain container hotel optom"
+    "bitmain container hotel waterblock"
+    "whatsminer container hotel waterblock"
+    "whatsminer container electro waterblock"
+    "whatsminer blockchain blockchain waterblock";
+    column-gap: 20px;
+
+    @include vp-1439 {
+      display: grid;
+      grid-template-columns: 337px 313px;
+      grid-template-rows: 365px 180px 180px 190px 190px 103px;
+      grid-template-areas:
+      "bitmain optom"
+      "whatsminer container"
+      "whatsminer electro"
+      "pool waterblock"
+      "hotel waterblock"
+      "blockchain blockchain";
+      gap: 20px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+}
+
+.mining__item {
+  border-radius: 20px;
+  background-color: $color-bg-blue;
+  padding: 25px 30px;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  .mining__link {
+    color: $white;
+  }
+
+  &:hover .mining__image {
+    transform: scale(1.05) translate(6px, -6px);
+  }
+
+  &:hover .mining__image-blockchain {
+    transform: scale(1.05);
+  }
+
+  &:hover .mining__image-pool {
+    transform: scale(1.05) rotate(10deg);
+  }
+
+  &:hover .mining__image-container {
+    transform: scale(1.05) translateY(15px);
+  }
+
+  @include vp-767 {
+    width: 325px;
+    height: 385px;
+  }
+}
+
+.mining__title {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: start;
+}
+.mining__description {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: start;
+  top: 100%;
+  left: 0;
+}
+
+.mining__item-bitmain {
+  grid-area: bitmain;
+}
+
+.mining__item-whatsminer {
+  grid-area: whatsminer;
+  background-color: $color-bg-gray;
+  margin-top: 20px;
+
+  .mining__link {
+    color: $color-fz;
+  }
+
+  @include vp-1439 {
+    margin-top: 0;
+  }
+}
+
+.mining__item-pool {
+  grid-area: pool;
+  background-color: $color-bg-whiteblue;
+}
+
+.mining__item-container {
+  grid-area: container;
+  margin-top: 20px;
+
+  @include vp-1439 {
+    margin-top: 0;
+  }
+}
+
+.mining__item-blockchain {
+  grid-area: blockchain;
+  margin-top: 20px;
+  padding-top: 13px;
+
+  @include vp-1439 {
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+.mining__item-hotel {
+  grid-area: hotel;
+  background-color: $color-bg-gray;
+
+  .mining__link {
+    color: $color-fz;
+  }
+
+  @include vp-1439 {
+    .mining__image {
+      width: 250px;
+      height: 350px;
+      left: 150px;
+    }
+  }
+
+  @include vp-767 {
+    .mining__image {
+      width: 300px;
+      height: 400px;
+      left: 40px;
+    }
+  }
+}
+
+.mining__item-electro {
+  grid-area: electro;
+  background-color: $color-bg-whiteblue;
+  margin-top: 20px;
+
+  @include vp-1439 {
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    .mining__image-electro {
+      width: 250px;
+      height: 300px;
+    }
+  }
+}
+
+.mining__item-optom {
+  grid-area: optom;
+  background-color: $color-bg-whiteblue;
+
+  @include vp-1439 {
+    .mining__image {
+      left: 60px;
+    }
+  }
+
+  @include vp-767 {
+    .mining__image {
+      width: 250px;
+      height: 300px;
+    }
+  }
+}
+
+.mining__item-waterblocks {
+  grid-area: waterblock;
+  background-color: $color-bg-gray;
+  margin-top: 20px;
+
+  .mining__link {
+    color: $color-fz;
+  }
+
+  @include vp-1439 {
+    margin-top: 0;
+
+    .mining__image {
+      width: 250px;
+      height: 350px;
+    }
+  }
+
+  @include vp-767 {
+    .mining__image {
+      left: 100px;
+    }
+  }
+}
+
+.mining__image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transition: $trans-default;
+}
+
+.mining__image-pool {
+  left: 88px;
+  transform: scale(1.09);
+
+  @include vp-1439 {
+    left: 95px;
+  }
+
+  @include vp-767 {
+    width: 300px;
+    height: 250px;
+    left: 30px;
+  }
+}
+.mining__image-electro {
+  left: 63px;
+
+  @include vp-1439 {
+    width: 150px;
+    height: 150px;
+    left: 163px;
+  }
+
+  @include vp-767 {
+    left: 74px;
+  }
+}
+.mining__image-blockchain {
+  left: 160px;
+
+  @include vp-1439 {
+    width: 600px;
+    height: 103px;
+  }
+
+  @include vp-767 {
+    bottom: 40px;
+    left: -2px;
+  }
+}
+.mining__image-container {
+  transform: translateY(1em);
+
+  @include vp-1439 {
+    width: 150px;
+    height: 200px;
+    left: 164px;
+  }
+
+  @include vp-767 {
+    width: 250px;
+    height: 300px;
+    left: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.wrapper-box {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
+
+  main {
+    flex-grow: 1;
+    background-color: $color-bg-default;
+    padding: 0 20px;
+  }
+}
