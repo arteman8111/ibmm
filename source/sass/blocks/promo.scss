@@ -1,0 +1,51 @@
+.promo {
+  margin-top: 50px;
+}
+
+.promo__title {
+  margin: 0;
+  text-align: center;
+}
+
+.promo__description {
+  margin-top: 25px;
+  position: relative;
+  border: 5px solid $color-default;
+  padding: 30px 100px 35px 30px;
+  width: 772px;
+}
+
+.promo__img {
+  position: absolute;
+  top: -20px;
+  right: -400px;
+}
+
+.promo__item {
+  margin-top: 15px;
+}
+
+.promo__hello{
+  text-align: center;
+  font-weight: 700;
+}
+
+.promo__button {
+  border: none;
+  color: $white;
+  background-color: $color-default;
+  padding: 20px 50px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 10px;
+
+  &:hover {
+    outline: 1px solid $color-default;
+    background-color: $white;
+    color: $color-default;
+  }
+}
+
+.promo__item b {
+  color: $color-default
+}

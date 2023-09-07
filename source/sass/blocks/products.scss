@@ -1,0 +1,37 @@
+.products {
+  margin-top: 50px;
+  padding-bottom: 25px;
+  background-color: #e1e1e1;
+}
+
+.products__list {
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.products__item {
+  background-color: $white;
+
+  &:hover {
+    outline: 1px solid $color-default;
+    border-radius: 4px;
+  }
+}
+
+.products__title {
+  font-size: 18px;
+  text-align: center;
+}
+
+.products__title-main {
+  margin: 0;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}

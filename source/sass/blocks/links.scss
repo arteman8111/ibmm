@@ -1,0 +1,24 @@
+.links {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  background-color: $white;
+  font-size: 12px;
+}
+
+.links__item {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: $black;
+  border-left: 1px solid rgba(34, 60, 80, 0.2);
+
+  &:hover {
+    background-color: $color-default;
+    color: $white
+  }
+}
+
+.links__item:first-child {
+  border-left:none
+}

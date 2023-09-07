@@ -1,8 +1,9 @@
+
 {
-  "name": "webtask-to-ibmm",
+  "name": "webtask",
   "version": "2.0.0",
   "type": "module",
-  "description": "Тестовое задание для IBMM",
+  "description": "Тестовое задание для perspectiva",
   "browserslist": [
     "last 3 versions",
     "IE 11",

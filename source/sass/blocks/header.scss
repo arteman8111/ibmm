@@ -1,18 +1,63 @@
-.header {
-  background-color: $color-bg-blue;
+.header__nav {
+  background-color: $black;
   color: $white;
-  text-align: center;
-  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  padding: 20px;
+}
+.header__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__official {
+  text-transform: uppercase;
+  color: #878787;
+}
+.header__button {
+  border: none;
+  color: $white;
+  background-color: $color-default;
+  padding: 10px 20px;
+  font-weight: 700;
 
-  @include vp-1439 {
-    padding: 15px 20px;
-  }
-
-  @include vp-767 {
-    padding: 10px 15px;
+  &:hover {
+    outline: 1px solid $color-default;
+    background-color: $white;
+    color: $color-default;
   }
 }
 
-.header__title {
-  margin: 0;
+.header__item-town:first-child {
+  color: #878787;
+}
+
+.header__search {
+  background-color: $black;
+  border: none;
+  cursor: pointer;
+}
+
+.header__basket {
+  background-color: gray;
+  padding: 10px 20px;
+  font-weight: 700;
+  color: $white;
+  border: none;
+
+  &:hover {
+    outline: 1px solid gray;
+    background-color: $white;
+    color: gray;
+  }
+}
+.header__item-phone {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
